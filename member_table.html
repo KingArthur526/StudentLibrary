@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Members Table</title>
+ <style>
+.member{
+background-color:gray; border-color: purple; border-style: groove; text-align: center;align-content: center;
+width: 260px; height: 370px; margin-right: 5px; margin-bottom: 5px;
+vertical-align: middle; float:left; position:relative; top:70px;
+}
+ </style>
+ </head>
+<body>
+<div style=" border-style:solid; border-size:2px;text-align:center; background-image:
+url('/media/Bg/bg.jpg'); background-size:cover; height:150px; color:rgb(255,150,200); border-color:yellow; lineheight: 10px;">
+{% include "menu.html"%}
+ <h1>Library Members<h1/>
+</div>
+{% for rec in memberformdata %}
+ <div class="member">
+ Member Name: {{rec.name}}<br />
+ Currently in class: {{rec.std}} <br />
+ <a href="{{rec.photo}}"> <img src="/media/{{rec.photo}}" alt="Photo" width="220"
+height="200" /> </a>
+ <br/>
+ Born on: {{rec.dob}} <br />
+ </div>
+{% endfor %}
+</body>
+</div>
+</html>
