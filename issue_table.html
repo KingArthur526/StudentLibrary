@@ -1,0 +1,27 @@
+ <style>
+.issue{
+background-color:gray; border-color: purple; border-style: groove; text-align: center;align-content: center;
+width: 220px; height: 370px; margin-right: 5px; margin-bottom: 5px;
+vertical-align: middle; float:left; position:relative; top:70px;
+}
+ </style>
+ </head>
+<body>
+<div style=" border-style:solid; border-size:2px;text-align:center; background-image:
+url('/media/Bg/bg.jpg'); background-size:cover; height:120px; color:rgb(255,150,200); border-color:yellow; lineheight: 10px;">
+{% include "menu.html"%}
+ <h2>Issued Book Info<h2/>
+</div>
+{% for rec in issueformdata %}
+ <div class="issue">
+ Book Number: {{rec.bookno}}<br />
+ Member issued to: {{rec.borrower}} <br />
+ <b> {{rec.booktitle}}</b><br />
+ Borrowed By: {{rec.photo}} <br />
+ Issued on: {{rec.issue_date}} <br />
+ To be returned by: {{rec.return_date}} <br />
+ </div>
+{% endfor %}
+</body>
+</div>
+</html>
