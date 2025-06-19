@@ -1,0 +1,24 @@
+<html>
+ <head>
+ <title>Member Form Template</title>
+ </head>
+<body bgcolor="#EEDDC0">
+<div style=" border-size:2px;text-align:center;
+background-image:url('/media/Bg/bg.jpg'); background-size:cover; height:120px; color:rgb(255,150,200);
+line-height: 10px;">
+{% include "menu.html"%}
+ <h1 style='color:white';>Member Form<h1/>
+</div>
+<form action="/library/member" method="post" enctype="multipart/form-data" >
+<table align="center" bgcolor="#CACAF0">
+ {% csrf_token %}
+ {{ memberformdata.as_table }}
+<tr> <td colspan="2" align="center">
+ <input type="submit" value="Submit" />
+ <input type="hidden" name="h_id" value="0" id="h_id">
+ </td>
+ </tr>
+</table>
+</form>
+</body>
+</html>
