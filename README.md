@@ -1,44 +1,45 @@
-Django Library Management System
+# Django Library Management System
 
-This is a web-based Library Management System built with Django. It allows users to manage books, library members, and book borrowing activities through a clean and simple interface. Users can perform CRUD operations on books and members, track book issues and returns, and display book covers and member photos.
+A web-based Library Management System built with Django. It enables librarians and users to manage books, members, and book borrowing records through a simple and functional interface.
 
-Features
+## Features
 
 - Add and manage books with metadata and cover images
-- Register new library members with profile photos
-- Issue books to members and track return dates
-- View uploaded book covers and member photos
-- Organized tables for books, members, and issued records
-- Built-in form validations and date pickers for user input
+- Register new library members with photos
+- Issue books to members and set return dates
+- Display uploaded book and member images
+- View all entries in structured HTML tables
+- Built-in date pickers and form validation
 
-Tech Stack
+## Tech Stack
 
-Backend: Python, Django  
-Frontend: HTML, CSS (inline styling)  
-Database: SQLite  
-Media Handling: Django’s file/image upload system
+- Backend: Python, Django  
+- Frontend: HTML, CSS (inline styling)  
+- Database: SQLite (default Django DB)  
+- Media Handling: Django file/image uploads
 
-Project Structure
-
+## Project Structure
+```
 library/
-├── models.py         - Book, BookIssue, Lib_Member models  
-├── forms.py          - ModelForms for Book, Issue, Member  
-├── views.py          - Handles HTTP requests and form logic  
-├── urls.py           - Route definitions  
+├── models.py # Book, BookIssue, Lib_Member models
+├── forms.py # Forms for Book, Issue, Member
+├── views.py # View logic and routing
+├── urls.py # URL patterns
 ├── templates/
-│   ├── home.html
-│   ├── book_table.html
-│   ├── Booksform.html
-│   ├── member.html
-│   ├── member_table.html
-│   ├── borrow.html
-│   ├── issue_table.html
-│   └── menu.html
+│ ├── home.html
+│ ├── book_table.html
+│ ├── Booksform.html
+│ ├── member.html
+│ ├── member_table.html
+│ ├── borrow.html
+│ ├── issue_table.html
+│ └── menu.html
 └── media/
-    ├── images/
-    │   ├── books/
-    │   └── members/
-    └── Bg/
+└── images/
+├── books/
+└── members/
+└── Bg/
+```
 
 Templates Summary
 
