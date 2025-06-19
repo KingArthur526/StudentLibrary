@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Books Table</title>
+ <style>
+.book{
+background-color:gray; border-color: purple; border-style: groove; text-align: center;align-content: center;
+width: 220px; height: 370px; margin-right: 5px; margin-bottom: 5px;
+vertical-align: middle; float:left; position:relative; top:70px;
+}
+ </style>
+ </head>
+<body>
+<div style=" border-style:solid; border-size:2px;text-align:center; background-image:
+url('/media/Bg/bg.jpg'); background-size:cover; height:120px; color:rgb(255,150,200); border-color:yellow; lineheight: 10px;">
+{% include "menu.html"%}
+ <h2>Books in Library<h2/>
+</div>
+{% for rec in booksdata %}
+ <div class="book">
+ Book Number: {{rec.bookno}}<br />
+ ISBN: {{rec.isbn}} <br />
+ <b> {{rec.booktitle}}</b><br />
+ <a href="{{rec.frontcover}}"> <img src="/media/{{rec.frontcover}}" alt="Photo" width="150"
+height="200" /> </a>
+ <br/>
+ Written by {{rec.author}} <br />
+ Published by {{rec.publisher}} <br />
+ Rs{{rec.price}} <br />
+ Barcode:{{rec.barcode}} <br />
+ </div>
+{% endfor %}
+</body>
+</div>
+</html>
